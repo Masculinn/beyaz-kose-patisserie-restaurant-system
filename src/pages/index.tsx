@@ -32,7 +32,13 @@ export default function Home() {
                   initial={{ y: 20, filter: "blur(5px)", opacity: 0 }}
                   whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
                   exit={{ y: 20, filter: "blur(5px)", opacity: 0 }}
-                  transition={{ duration: 0.42, bounce: 0.5, delay: 0.25 }}
+                  transition={{
+                    duration: 0.42,
+                    bounce: 0.5,
+                    damping: 10,
+                    mass: 0.5,
+                    delay: 0.33,
+                  }}
                   viewport={{ once: false, amount: 0.5 }}
                   className="flex justify-between items-center gap-2 w-full border-b border-gray-600 border-dashed pt-2 pb-1"
                 >

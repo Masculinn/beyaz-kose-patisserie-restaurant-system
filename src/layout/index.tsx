@@ -117,7 +117,9 @@ export default function Layout({
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
       </Head>
-      <AnimatePresence>{showSplash && <Splash key="splash" />}</AnimatePresence>
+      <AnimatePresence mode="wait">
+        {showSplash && <Splash key="splash" />}
+      </AnimatePresence>
       <main
         className={`
             px-4 sm:px-6 md:px-8
@@ -127,6 +129,7 @@ export default function Layout({
             min-h-screen
             bg-cover
             bg-gradient-to-br from-[#b1f7f7]/40 via-[#D7DFDF]/10 to-[#9AB1AF]
+            ${showSplash ? "hidden" : "block "}
           `}
       >
         {children}
