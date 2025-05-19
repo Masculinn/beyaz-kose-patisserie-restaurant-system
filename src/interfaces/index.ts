@@ -1,5 +1,13 @@
 /* Component interfaces */
 
+export interface BackgroundGridProps {
+  color: string;
+  cellSize: string | number;
+  strokeWidth: number | string;
+  className?: string;
+  fade?: boolean;
+}
+
 export interface BannerProps {
   className?: string;
 }
@@ -15,6 +23,17 @@ export interface ListContentProps extends React.HTMLAttributes<HTMLDivElement> {
 export interface Pricing {
   fixed: number;
   percentage?: number;
+}
+
+export interface SplashProps {
+  onAnimationComplete?: () => void;
+}
+
+export interface LogoProps {
+  className?: string;
+  isAnimated?: boolean;
+  height?: number;
+  width?: number;
 }
 
 export interface ListPriceProps
@@ -40,3 +59,7 @@ export interface ProductItemProps {
   item: string;
   price: Pricing;
 }
+
+/** Utils interfaces */
+
+export type DiscountFunc = (price: number, discount: number) => number;

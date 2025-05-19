@@ -2,9 +2,9 @@ import { BackgroundGridProps } from "@/interfaces";
 import { HTMLProps } from "react";
 
 const BackgroundGrid = ({
-  color = "#fb3a5d",
+  color = "#136d7d",
   cellSize = "25px",
-  strokeWidth = "3px",
+  strokeWidth = "1px",
   className,
   fade = true,
   ...props
@@ -19,7 +19,7 @@ const BackgroundGrid = ({
 
   return (
     <div
-      className={`pointer-events-none absolute inset-0 left-0 top-0 flex h-full w-full ${className}`}
+      className={`pointer-events-none absolute inset-0 left-0 top-0 flex h-[750px] w-full ${className}`}
       style={{
         backgroundImage: `url("${svgDataUrl}")`,
         backgroundRepeat: "repeat",
@@ -32,7 +32,7 @@ const BackgroundGrid = ({
           : undefined,
       }}
       {...props}
-    ></div>
+    />
   );
 };
 
