@@ -1,4 +1,3 @@
-// List.tsx
 import React, { FC } from "react";
 import {
   ListContentProps,
@@ -9,21 +8,17 @@ import {
   ListTitleProps,
 } from "@/interfaces";
 
-// Root “container”:
 const List = ({
   className,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>) => {
-  return (
-    <div
-      data-slot="list"
-      className={`flex flex-col gap-4 ${className}`}
-      {...props}
-    />
-  );
-};
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    data-slot="list"
+    className={`flex flex-col gap-4 ${className}`}
+    {...props}
+  />
+);
 
-// 1) List.Header only renders its children (we’ve removed title/desc props):
 const ListHeader: FC<ListHeaderProps> = ({ children, className, ...props }) => (
   <div
     data-slot="list-header"
@@ -34,7 +29,6 @@ const ListHeader: FC<ListHeaderProps> = ({ children, className, ...props }) => (
   </div>
 );
 
-// 2) List.Title just wraps an <h2>:
 const ListTitle: FC<ListTitleProps> = ({ className, ...props }) => (
   <h2
     data-slot="list-title"
@@ -43,7 +37,6 @@ const ListTitle: FC<ListTitleProps> = ({ className, ...props }) => (
   />
 );
 
-// 3) List.Description just wraps a <p>:
 const ListDescription: FC<ListDescProps> = ({ className, ...props }) => (
   <p
     data-slot="list-description"
@@ -52,7 +45,6 @@ const ListDescription: FC<ListDescProps> = ({ className, ...props }) => (
   />
 );
 
-// 4) List.Content is a simple flex container for its children:
 const ListContent: FC<ListContentProps> = ({
   children,
   className,
@@ -60,14 +52,13 @@ const ListContent: FC<ListContentProps> = ({
 }) => (
   <div
     data-slot="list-content"
-    className={`flex flex-row justify-between ${className}`}
+    className={`flex flex-col justify-center items-center ${className}`}
     {...props}
   >
     {children}
   </div>
 );
 
-// 5) List.Item wraps a <p> for the item’s name:
 const ListItem: FC<ListItemProps> = ({ className, ...props }) => (
   <p
     data-slot="list-item"
@@ -76,7 +67,6 @@ const ListItem: FC<ListItemProps> = ({ className, ...props }) => (
   />
 );
 
-// 6) List.Price wraps a <span> and expects a “price” prop:
 const ListPrice: FC<ListPriceProps> = ({ price, className, ...props }) => (
   <span
     data-slot="list-price"
@@ -87,7 +77,6 @@ const ListPrice: FC<ListPriceProps> = ({ price, className, ...props }) => (
   </span>
 );
 
-// Now wire up exactly one assignment per “slot”:
 List.Header = ListHeader;
 List.Title = ListTitle;
 List.Description = ListDescription;

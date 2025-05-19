@@ -2,7 +2,6 @@
 
 export interface BannerProps {
   className?: string;
-  children: React.ReactNode;
 }
 
 export interface ListHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -28,11 +27,15 @@ export type ListDescProps = React.ComponentProps<"p">;
 export type ListItemProps = React.ComponentProps<"p">;
 
 /** Lib interfaces */
-export interface ProductCategory {
-  title: string;
-  desc: string;
-  items: string[];
-}
+
+export type ProductCategory = Record<
+  string,
+  {
+    title: string;
+    desc: string;
+    items: ProductItemProps[];
+  }
+>;
 export interface ProductItemProps {
   item: string;
   price: Pricing;
