@@ -1,11 +1,23 @@
+import { Banner } from "@/components/banner";
+import { List } from "@/components/list";
 export default function Home() {
   return (
-    <div className="grid place-content-center-safe">
-      <h1 className="font-brand text-3xl text-primary">Font brand test</h1>
-      <h1 className="text-xl text-secondary">
-        Font primary without class text
-      </h1>
-      <h1 className="font-primary text-xl">Font primary with class text</h1>
-    </div>
+    <>
+      <Banner>
+        <h3 className="text-white text-shadow-md tracking-tight">
+          Tatlılarımızda yaza özel %20 ye varan indirim sizlerle!
+        </h3>
+      </Banner>
+      <List className="mt-12">
+        <List.Header>
+          <List.Title>List Title</List.Title>
+          <List.Description>List Description</List.Description>
+        </List.Header>
+        <List.Content>
+          <List.Item>Milk</List.Item>
+          <List.Price price={{ fixed: 24 }} />
+        </List.Content>
+      </List>
+    </>
   );
 }
