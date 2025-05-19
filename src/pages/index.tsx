@@ -4,6 +4,7 @@ import { Banner } from "@/components/banner";
 import { List } from "@/components/list";
 import dataLib from "@/lib/data.lib";
 import React from "react";
+import Map from "@/components/map";
 
 export default function Home() {
   return (

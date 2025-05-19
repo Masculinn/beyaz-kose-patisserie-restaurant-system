@@ -25,10 +25,6 @@ export interface Pricing {
   percentage?: number;
 }
 
-export interface SplashProps {
-  onAnimationComplete?: () => void;
-}
-
 export interface LogoProps {
   className?: string;
   isAnimated?: boolean;
@@ -41,6 +37,10 @@ export interface ListPriceProps
   price: Pricing;
 }
 
+export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
+  className?: string;
+}
 export type ListTitleProps = React.ComponentProps<"h2">;
 export type ListDescProps = React.ComponentProps<"p">;
 export type ListItemProps = React.ComponentProps<"p">;

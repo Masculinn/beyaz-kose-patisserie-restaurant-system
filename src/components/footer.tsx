@@ -1,19 +1,16 @@
 import { FC } from "react";
 import Link from "next/link";
 import { Separator } from "./separator";
+import Map from "./map";
 
 const Footer: FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative pt-8 pb-14 w-full mx-auto ">
-      <div className="flex flex-col items-center justify-center max-w-7xl mx-auto w-full gap-8">
-        <h1 className="text-5xl font-extralight  font-brand self-center justify-self-center text-center">
-          PATTISERRIE
-        </h1>
-      </div>
+    <footer className="relative w-full mx-auto pb-6">
+      <Map />
       <Separator />
-      <div className=" px-2">
+      <div className="px-2 ">
         <div className="flex justify-center">
           <p className="text-xs leading-5 text-secondary text-center font-primary">
             &copy; {currentYear} Tüm hakları saklıdır. |{" "}

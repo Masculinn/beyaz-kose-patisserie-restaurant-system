@@ -15,6 +15,7 @@ export const Logo: FC<LogoProps> = ({
       height={height}
       width={width}
       priority
+      loading="eager"
       alt={`${STORE_NAME} logo`}
       className={`rounded-full ${isAnimated && "animate-bounce"} ${className}`}
     />

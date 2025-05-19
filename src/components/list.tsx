@@ -7,6 +7,7 @@ import {
   ListPriceProps,
   ListTitleProps,
 } from "@/interfaces";
+import { getDiscount } from "@/utils/getDiscount";
 
 const List = ({
   className,
@@ -70,10 +71,19 @@ const ListItem: FC<ListItemProps> = ({ className, ...props }) => (
 const ListPrice: FC<ListPriceProps> = ({ price, className, ...props }) => (
   <span
     data-slot="list-price"
-    className={`tracking-tight ${className}`}
+    className={`tracking-tight ${className} inline-flex gap-1 items-center`}
     {...props}
   >
-    {price.fixed} TL {price.percentage ? `(${price.percentage}% off)` : ""}
+    {price.percentage ? (
+      <>
+        <span className="text-lg text-primary">{price.fixed} TL</span>
+        <span className="text-sm line-through decoration-primary">
+          {getDiscount(price.fixed, price.percentage)} TL{" "}
+        </span>
+      </>
+    ) : (
+      <>{price.fixed} TL</>
+    )}
   </span>
 );
 
