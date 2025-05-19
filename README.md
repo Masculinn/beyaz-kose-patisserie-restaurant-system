@@ -1,40 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+### Project Definition
 
-## Getting Started
+_A patisserie menu project aims creating design and developing the interface of the products by listing and categorizing them throughout the scope of MVP._
+For further implementation, the actual product will be served within the larger boundaries of the MVP by expanding it with CRM admin dashboard and dynamic product listing.
 
-First, run the development server:
+### Tech stack (MVP)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Front-end
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  - Next.js [page router]
+  - React.js
+  - TailwindCSS
+  - Typescript
+  - Motion
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- Hosting
+  - Netlify
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Tech stack (Version 2.0)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- Front-end
+  ...
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Back-end
+  - Supabase
+  - Redux
 
-## Learn More
+### To-do
 
-To learn more about Next.js, take a look at the following resources:
+- Finding the accurate color palette that matches with the client's designing.
+- Finding the actual font \*\*.
+- Initializing a github repo called `beyaz-kose-patisserie-restaurant-system`.
+- \*\* project called also `beyaz-kose-patisserie-restaurant-system`.
+- Implementing UI
+  - Choosing the right shadcn theme fits to theme colors.
+  - Choosing the UI elements that will be used.
+  - Adding `globals.css` styles and fonts configs.
+  - Creating product listing prototypes for categories.
+  - Creating mock-up and testing.
+  - Adding element animations that triggers on scroll when in view.
+  - Creating `send your location to your friend` button. (Check **API AVAILABILITY** from whatsapp).
+  - Adding footer for copyright.
+  - Adding transition API that will be used as intro.
+  - Adding fundamental SEO checklist.
+- Adding last touches (assets, extras, dividers...).
+- Testing the app.
+- Building/Launching to production.
+- Deploying to netlify with (beyazkosepatisserie.netlify.app).
+- Extracting the QR code asking the table count of the store.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+### Assets
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+| Role              | Tailwind Class (≈) | Hex       | RGB               | Usage Examples                                  |
+| ----------------- | ------------------ | --------- | ----------------- | ----------------------------------------------- |
+| **Primary**       | `cyan-400`         | `#22D3EE` | `(34, 211, 238)`  | Major buttons, links, active states, headers    |
+| **Secondary**     | —                  | `#94AAAA` | `(148, 170, 170)` | Sub‐headers, borders, icons—ties back to logo   |
+| **Accent**        | —                  | `#CAD5D5` | `(202, 213, 213)` | Background cards, highlights, “disabled” fields |
+| **Neutral Dark**  | —                  | `#2E2E2E` | `(46, 46, 46)`    | Body text, icons, dark‐mode contrasts           |
+| **Neutral Light** | —                  | `#F9F9F9` | `(249, 249, 249)` | Page backgrounds, input/card backgrounds        |
