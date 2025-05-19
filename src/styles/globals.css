@@ -6,17 +6,20 @@
 }
 
 @theme inline {
+  --font-primary: var(--font-primary);
+  --font-brand: var(--font-brand);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --foreground: #0a0a0a;
+  --background: #ededed;
+  --primary: #136d7d;
+  --secondary: #362e2e;
 }
 
 body {
