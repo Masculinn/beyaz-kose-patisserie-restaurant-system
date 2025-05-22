@@ -1,17 +1,18 @@
 **Project name: QR-based menu web automation**
+**Start date 19/05/2025 – 08.00**
+**End date 19/05/2025 – 21.00**
+
+> _Permission obtained from the client to share the project open sourced. At the end of this page, you will find the resources to run the app as well as the `lib` file to integrate your own datasets._
 
 ## Project Definition
 
 _A patisserie menu project aims at creating design and developing the interface of the products by listing and categorizing them throughout the scope of the MVP. For further implementation, the current product will be served within the larger boundaries of the MVP by expanding it with a CRM admin dashboard and dynamic product listing._
 
-> _Permission obtained from the client to share the project open sourced. At the end of this page, you will find the resources to run the app as well as the `lib` file to integrate your own datasets._
+<br />
 
-Project start date 19/05/2025 – 08.00
-Project end date 19/05/2025 – 21.00
+> Due to getting quite tiny project which requires minimal effort, I've decided to push the limits of mine by focusing the project for the entire day, thus I could put a new achivement to my developer journey shelf like _Hands-on Pro-I_, imagine like a badge you giving yourself
 
-> Due to getting quite tiny project which requires minimal effort, I've decided to push the limits of mine by focusing the project for the entire day, thus I could put a new achivement to my developer journey like _Hands-on Tier-I_, imagine like a badge you giving yourself
-
-### Some shots from production ready version of the project
+---
 
 ## 📱 App Screenshot
 
@@ -55,6 +56,8 @@ src/
 └── utils/
 ```
 
+---
+
 ### To-do
 
 - ~~Finding the accurate color palette that matches with the client's designing.~~
@@ -94,7 +97,9 @@ src/
 
 ![QR](/public/assets/qr.png)
 
----
+<div align="center">
+Now in production, scan me!
+</div>
 
 ## QR automation superficial project report
 
@@ -138,7 +143,7 @@ I believe that the development of a “product dashboard” instead of constantl
 
 ### 🛠️ Installation
 
-Clone the project:
+Clone the project using CLI:
 
 ```bash
 gh repo clone Masculinn/beyaz-kose-patisserie-restaurant-system
@@ -159,8 +164,9 @@ npm install
 Everything that works on the background of the app comes from one `lib` file which is `data.lib.ts` inside of `/src/lib` directory.
 
 ```ts
+
 // simply modify the properties to integrate your own datasets
-// Add visually discount that will strikehold the actual increased price on UI by adding percentage property that you gave.
+// Add visually discount that will strikehold the actual increased price on UI by adding percentage property.
 
 import { ProductCategory } from "@/interfaces";
 
@@ -183,3 +189,5 @@ export default {
   },
 } satisfies ProductCategory;
 ```
+
+See you in the next one!
