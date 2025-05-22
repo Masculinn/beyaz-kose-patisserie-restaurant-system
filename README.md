@@ -1,20 +1,31 @@
-Project name: QR-based menu web automation
+**Project name: QR-based menu web automation**
 
 ## Project Definition
 
 _A patisserie menu project aims at creating design and developing the interface of the products by listing and categorizing them throughout the scope of the MVP. For further implementation, the current product will be served within the larger boundaries of the MVP by expanding it with a CRM admin dashboard and dynamic product listing._
 
-> _Permission obtained from the client to share the project open sourced._
+> _Permission obtained from the client to share the project open sourced. At the end of this page, you will find the resources to run the app as well as the `lib` file to integrate your own datasets._
+
+Project start date 19/05/2025 – 08.00
+Project end date 19/05/2025 – 21.00
+
+> Due to getting quite tiny project which requires minimal effort, I've decided to push the limits of mine by focusing the project for the entire day, thus I could put a new achivement to my developer journey like _Hands-on Tier-I_, imagine like a badge you giving yourself
 
 ### Some shots from production ready version of the project
 
-App screenshot:
-![app screenshot](/public/assets/app_screenshot.png)
+## 📱 App Screenshot
+
+<div align="center">
+  <img src="/public/assets/app_screenshot.png" alt="App Screenshot" width="300" style="border-radius: 8px; border: 1px solid #eee;">
+</div>
+
+## 🎨 UI Mockup
+
+<div align="center">
+  <img src="/public/assets/ui-mockup.png" alt="UI Mockup" width="600" style="border-radius: 8px; border: 1px solid #eee;">
+</div>
 
 ---
-
-UI mockup screenshot:
-![UI mockup](/public/assets/beyaz-kose-patiserrie-ui.png)
 
 ### Tech stack (MVP – production ready)
 
@@ -28,6 +39,21 @@ UI mockup screenshot:
 
 - Hosting
   - Netlify
+
+### Hierarchy
+
+I have used **BDD approach** as methodology while developing & designing the product.
+
+```bash
+src/
+├── components/
+├── interfaces/
+├── layout/
+├── lib/
+├── pages/
+├── styles/
+└── utils/
+```
 
 ### To-do
 
@@ -64,31 +90,29 @@ UI mockup screenshot:
 | **Neutral Dark**  | —                  | `#2E2E2E` | `(46, 46, 46)`    | Body text, icons, dark‐mode contrasts           |
 | **Neutral Light** | —                  | `#F9F9F9` | `(249, 249, 249)` | Page backgrounds, input/card backgrounds        |
 
-**Logo:**
-![App logo](/public/logo.png)
-
 **Designed QR for restaurant tables:**
-![QR](/public/logo.png)
+
+![QR](/public/assets/qr.png)
 
 ---
 
-### Notes to the client after releasing the prod. ready version
+## QR automation superficial project report
 
-**QR automation superficial project report**
+### Project Definition
 
-_Project Definition_
 It includes a mobile web application where customers can access the menu and more by scanning QR codes on the tables inside the shop.
 
-_Projenin Amacı_
+### Project purpose
+
 To minimize the maximum workforce by increasing the service speed of employees with customers during working hours.
 
-_Desired specifications:_
+### Desired specifications
 
 1. The products and pricing offered in the specified menu to be used in the user interface.
 2. A simple interface, the name of the product and its price were considered sufficient.
 3. QR code support that allows customers to be directed to the web application, i.e. the menu, by scanning it from the cameras of mobile devices.
 
-_Extra processes developed:_
+### Extra features developed
 
 In addition to the items mentioned above,
 
@@ -100,14 +124,62 @@ In addition to the items mentioned above,
 - An animated opening screen was developed to make the brand name more evocative in the eyes of customers.
 - The project was implemented in the most efficient way by using the latest technology hosting and internet services.
 
-_Performance_
+### Performance
 
 After the completion of the project, various essential tests were carried out. The purpose of these tests was to measure the support of the interface by browsers and devices.
 
 As a result, loading issues were fixed for some older devices, and our website/application ran smoothly on almost all mobile devices with a 92% success rate.
 
-_Important information_
-
-Next steps,
+### Next steps,
 
 I believe that the development of a “product dashboard” instead of constantly changing the pricing each time with manual programming will play an important role in the long run in terms of sustainability as well as speed.
+
+## For developers
+
+### 🛠️ Installation
+
+Clone the project:
+
+```bash
+gh repo clone Masculinn/beyaz-kose-patisserie-restaurant-system
+```
+
+or
+
+```bash
+git clone
+```
+
+then run
+
+```bash
+npm install
+```
+
+Everything that works on the background of the app comes from one `lib` file which is `data.lib.ts` inside of `/src/lib` directory.
+
+```ts
+// simply modify the properties to integrate your own datasets
+// Add visually discount that will strikehold the actual increased price on UI by adding percentage property that you gave.
+
+import { ProductCategory } from "@/interfaces";
+
+export default {
+  beverages: {
+    title: "Category title",
+    desc: "Category description",
+    items: [
+      { item: "Item Title", price: { fixed: 99 } },
+      { item: "Discounted Item Title", price: { fixed: 100, percentage: 20 } },
+    ],
+  },
+  deserts: {
+    title: "Category title 2",
+    desc: "Category description 2",
+    items: [
+      { item: "Item Title", price: { fixed: 100, percentage: 20 } },
+      { item: "Discounted Item Title", price: { fixed: percentage: 20 } },
+    ],
+  },
+} satisfies ProductCategory;
+```
