@@ -1,9 +1,8 @@
-## **Project name: QR-based menu web automation**
-
----
-
 _Start date 19/05/2025 – 08.00_
+<br />
 _End date 19/05/2025 – 21.00_
+
+## **Project name: QR-based menu web automation**
 
 > _Permission obtained from the client to share the project open sourced. At the end of this page, you will find the resources to run the app as well as the `lib` file to integrate your own datasets._
 
@@ -11,11 +10,7 @@ _End date 19/05/2025 – 21.00_
 
 _A patisserie menu project aims at creating design and developing the interface of the products by listing and categorizing them throughout the scope of the MVP. For further implementation, the current product will be served within the larger boundaries of the MVP by expanding it with a CRM admin dashboard and dynamic product listing._
 
-<br />
-
 > Due to getting quite tiny project which requires minimal effort, I've decided to push the limits of mine by focusing the project for the entire day, thus I could put a new achivement to my developer journey shelf like _Hands-on Pro-I_, imagine like a badge you giving yourself
-
----
 
 ## 📱 App Screenshot
 
