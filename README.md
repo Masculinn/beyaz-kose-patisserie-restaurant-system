@@ -1,5 +1,7 @@
-**Project name: QR-based menu web automation**
-**Start date 19/05/2025 – 08.00**
+## **Project name: QR-based menu web automation**
+
+## **Start date 19/05/2025 – 08.00**
+
 **End date 19/05/2025 – 21.00**
 
 > _Permission obtained from the client to share the project open sourced. At the end of this page, you will find the resources to run the app as well as the `lib` file to integrate your own datasets._
