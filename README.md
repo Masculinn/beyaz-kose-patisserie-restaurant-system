@@ -46,7 +46,7 @@ _A patisserie menu project aims at creating design and developing the interface 
 
 ### Hierarchy
 
-I have used **BDD approach** as methodology while developing & designing the product.
+I have used very simple directories with **BDD approach** as methodology while developing & designing the product.
 
 ```bash
 src/
@@ -193,4 +193,4 @@ export default {
 } satisfies ProductCategory;
 ```
 
-See you in the next one!
+© 2025 – Burak Bilen
