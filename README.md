@@ -164,6 +164,12 @@ then run
 npm install
 ```
 
+after the steps, the app will work on
+
+```bash
+http://localhost:20526
+```
+
 Everything that works on the background of the app comes from one `lib` file which is `data.lib.ts` inside of `/src/lib` directory.
 
 ```ts
